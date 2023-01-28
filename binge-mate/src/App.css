@@ -1,38 +1,133 @@
-.App {
+* {
+  margin: 0; 
+}
+#header {
+  display: flex;
+  height: 100px;  
+  background-color: #020934;
+  justify-content: space-between;
+}
+#title {
+ display: flex;
+ padding-top: 27px;
+ color: rgb(223, 223, 223);
+}
+#list {
+  display: flex;
+  list-style: none;
+}
+#navButton {
+  display: flex;
+  padding-top: 12px;
+  justify-content: space-between;
+}
+#movieHeader {
+  padding-right: 20px;
+  padding-top: 21px;
+  color: rgb(223, 223, 223);
+}
+#TVHeader {
+  padding-right: 20px;
+  padding-top: 21px;
+  color: rgb(223, 223, 223);
+}
+#logoText {
+  padding-top: 30px;
+  padding-left: 10px;
+  color: rgb(223, 223, 223);
+}
+#body {
+  display: flex;
+  height: 400px;
+  background-color:#071d41;
+}
+#description {
+  color: rgb(223, 223, 223);
+  padding-left: 60px;
+  padding-top: 40px;
+}
+#body1 {
+  flex-direction: column;
+}
+#sub {
+  padding-left: 60px;
+  padding-top: 20px;
+  color: rgb(223, 223, 223);
+}
+#images {
+  display: flex;
+}
+#image1 {
+  flex-direction: column;
+}
+#rrrP {
+  height: 200px;
+  width: 200px;  
+  padding-top: 30px;
+  padding-left: 100px;
+}
+#jackP {
+  width: 200px; 
+  height: 200px; 
+  padding-top: 30px;
+  padding-left: 100px;
+}
+#movieB {
+  margin-left: 150px;
+}
+#tvB {
+  margin-left: 170px;
+}
+#footer {
+  background-color: rgb(65, 115, 79);
+  height: 250px;
+}
+#quote {
+  padding-top: 10px;
+  font-size:  25px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#author {
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 300px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#copy {
+  text-align: right;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+#gitP {
+  padding-bottom: 100px;
+  width: 100px;
+  height: 50px;
+}
+#credit {
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 40px;
+  padding-left: 40px;
+}
+#lower {
+  display: flex;
+  justify-content: space-between;
+}
+#OTT {
+  padding-top: 60px;
+}
+#final {
+  padding-top: 60px;
+  padding-right: 40px;
+}
+#ama {
+  padding-right: 20px;
+  border-radius: 50%;
+}
+#net {
+  padding-right: 20px;
+  border-radius: 50%;
+}
+#dis {
+  border-radius: 50%;
+}
+#underline {
+  
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
