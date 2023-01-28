@@ -8,5 +8,5 @@ Description
 
 ## Contributors
 
-Team Leader: Michael Pangas (MSP2#8595)
+Team Leader: Michael Pangas (MSP2#8595)<br />
 Team Member: Pranet Allu (PRANETALLU#8096)
