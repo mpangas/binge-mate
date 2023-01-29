@@ -70,7 +70,7 @@ const Shows = () => {
             <div className="recommendations">
                 {
                     showResults && content && content.map((c) => (
-                        <SingleContent key={c.id} id={c.id} poster={c.poster_path} title={c.name} date={c.first_air_date} media_type={"movie"} vote_average={c.vote_average} genre={c.genres[0].name} />
+                        <SingleContent key={c.id} id={c.id} poster={c.poster_path} title={c.name} date={c.first_air_date} media_type={"movie"} vote_average={c.vote_average} />
                     ))
                 }
             </div>

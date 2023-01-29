@@ -34,11 +34,12 @@
 }
 
 .selected {
-    color: rgb(51, 155, 253);
+    color: rgb(20, 208, 164);
 }
 
 .recommendations {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: 0px 70px;
 }

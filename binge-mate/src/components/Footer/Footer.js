@@ -7,9 +7,6 @@ import netflix from '../../Image/netflix.JPG';
 const Footer = () => {
   return (
     <div id="footer">
-          <p id="quote"><em>"A good movie makes the audience feel like they've
-          journeyed with the characters"</em></p>
-          <p id="author">- Rich Moore</p>
           <div id="lower">
             <div id="credit">
               <h2 id="listCreator">Creators</h2>

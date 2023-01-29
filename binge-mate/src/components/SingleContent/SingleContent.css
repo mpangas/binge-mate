@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 200px;
   padding: 5px;
-  margin: 5px 0;
+  margin: 5px 5px;
   background-color: #282c34;
   border-radius: 10px;
   position: relative;
@@ -46,7 +46,7 @@
 
 .subtitle {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-bottom: 3px;
   padding: 0 2px;
   padding-bottom: 3px;

@@ -29,9 +29,6 @@ const SingleContent = ({
             <a className="imageWrap" href={`https://www.youtube.com/watch?v=${video}`} target="_blank" alt="trailer"><img className="poster" src={poster ? `${img_300}/${poster}` : unavailable} alt={title} /></a>
             <b className="title">{title}</b>
             <span className="subtitle">
-                {genre}
-            </span>
-            <span className="subtitle">
                 {date.substring(0, 4)}
             </span>
         </div>
