@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Movies = () => {
+const Shows = () => {
   return (
     <div>
-        <h1>Shows</h1>
+        <h1 className="sectionName">TV Show Recommendation Tool</h1>
     </div>
   )
 }
 
-export default Movies
+export default Shows
