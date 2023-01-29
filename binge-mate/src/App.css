@@ -28,6 +28,7 @@
   border: none;
   background-color: transparent;
   margin-right: 50px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .navButton:hover {
   cursor: pointer;
@@ -38,6 +39,7 @@
   margin-left: 30px;
   color: rgb(223, 223, 223);
   margin-right: auto;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #logoText:hover {
   cursor: pointer;
@@ -52,6 +54,8 @@
   padding-top: 40px;
   font-size: 35px;
   margin-right: 10px;
+  padding-right: 90px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #body1 {
   flex-direction: column;
@@ -60,6 +64,7 @@
   padding-top: 20px;
   color: rgb(223, 223, 223);
   font-size: 19px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #images {
   display: flex;
@@ -68,22 +73,24 @@
   flex-direction: column;
 }
 #rrrP {
-  height: 400px;
-  width: 400px;  
+  height: 370px;
+  width: 370px;  
   padding-top: 30px;
-  padding-left: 150px;
+  padding-left: 120px;
 }
 #jackP {
-  width: 400px; 
-  height: 400px; 
+  width: 350px; 
+  height: 370px; 
   padding-top: 30px;
   padding-left: 50px;
 }
 #movieB {
-  margin-left: 290px;
+  margin-top: 20px;
+  margin-left: 250px;
 }
 #tvB {
-  margin-left: 220px;
+  margin-top: 20px;
+  margin-left: 200px;
 }
 #footer {
   background-color:#020934;
@@ -107,14 +114,13 @@
   text-align: right;
 }
 #gitP {
-  padding-bottom: 100px;
+  padding-top: 50px;
   width: 100px;
   height: 50px;
 }
 #credit {
   flex-direction: column;
   padding-top: 40px;
-  padding-left: 40px;
   color: rgb(223, 223, 223);
 }
 #lower {
@@ -147,9 +153,9 @@
   padding: 5px;
 }
 #phrase {
-  padding-top: 50px;
-  padding-left: 300px;
-  font-size: 28px;
+  padding-top: 90px;
+  padding-left: 160px;
+  font-size: 35px;
 }
 #everything {
   flex-direction: column;

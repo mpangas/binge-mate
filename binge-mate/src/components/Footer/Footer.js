@@ -19,9 +19,9 @@ const Footer = () => {
               <p id="mike">Mike Pangas</p>
             </div>
             <div id="OTT">
-              <img className="logo" src={amazon} width="70px" height="50px" alt=""></img>
-              <img className="logo" src={netflix} width="70px" height="50px" alt=""></img>
-              <img className="logo" src={disney} width="70px" height="50px" alt=""></img>
+              <a href="https://www.amazon.com/amazonprime"><img className="logo" src={amazon} width="70px" height="50px" alt=""></img></a>
+              <a href="https://www.netflix.com/login"><img className="logo" src={netflix} width="70px" height="50px" alt=""></img></a>
+              <a href="https://www.disneyplus.com/login"><img className="logo" src={disney} width="70px" height="50px" alt=""></img></a>
             </div>
             <div id="final">
               <a href="https://github.com/mpangas/binge-mate"><img src={gitPic} id="gitP" align="right" alt=""></img></a>
