@@ -27,3 +27,18 @@
     flex-direction: row;
     max-height: 100px;
 }
+
+.subheading {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.selected {
+    color: rgb(51, 155, 253);
+}
+
+.recommendations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

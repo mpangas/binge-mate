@@ -1,21 +1,36 @@
-import { React, useState } from 'react'
+import { React, useEffect, useState } from 'react'
 import { Button, createTheme, TextField, ThemeProvider } from '@mui/material';
 import axios from 'axios';
 import SearchIcon from '@mui/icons-material/Search';
 import './Shows.css';
+import SingleContent from '../../components/SingleContent/SingleContent';
 
 const Shows = () => {
+    const [showResults, setShowResults] = useState(false)
     const [searchText, setSearchText] = useState("");
     const [content, setContent] = useState();
+    const [selection, setSelection] = useState();
 
     const darkTheme = createTheme({
-        palette: {  
+        palette: {
             mode: 'dark',
         },
     });
-    
+
+    useEffect(() => {
+        setContent((prev) => []);
+    }, [showResults === true]);
+
     const fetchSearch = async () => {
+        setShowResults(false)
         const { data } = await axios.get(`https://api.themoviedb.org/3/search/tv?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=${searchText}&page=1&include_adult=false`)
+        setContent(data.results);
+    };
+
+    const findRecommendations = async (name, id) => {
+        setShowResults(true);
+        setSelection(name);
+        const { data } = await axios.get(`https://api.themoviedb.org/3/tv/${id}/recommendations?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`)
         setContent(data.results);
     };
 
@@ -47,9 +62,17 @@ const Shows = () => {
                 </div>
             </ThemeProvider>
             <div className="output">
-                {content && content.map((c) => (
-                    <div className="showName">{c.name || c.title}</div>
+                {!showResults && content && content.map((c) => (
+                    <div className="showName" onClick={() => findRecommendations(c.name, c.id)}>{c.name}</div>
                 ))}
+            </div>
+            {showResults && <h2 className="subheading">Recommendations for <span class="selected">{selection}</span></h2>}
+            <div className="recommendations">
+                {
+                    showResults && content && content.map((c) => (
+                        <SingleContent key={c.id} id={c.id} poster={c.poster_path} title={c.name} date={c.first_air_date} media_type={"movie"} vote_average={c.vote_average} genre={c.genres[0].name} />
+                    ))
+                }
             </div>
         </div>
     )
