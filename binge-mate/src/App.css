@@ -53,8 +53,7 @@
   color: rgb(223, 223, 223);
   padding-top: 40px;
   font-size: 35px;
-  margin-right: 10px;
-  padding-right: 90px;
+  margin-right: 35px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #body1 {
@@ -68,6 +67,7 @@
 }
 #images {
   display: flex;
+  margin-left: 50px;
 }
 #image1 {
   flex-direction: column;
@@ -77,12 +77,22 @@
   width: 370px;  
   padding-top: 30px;
   padding-left: 120px;
+  opacity: 75%;
+}
+#rrrP:hover {
+  opacity: 100%;
+  transition: opacity 1s;
 }
 #jackP {
   width: 350px; 
   height: 370px; 
   padding-top: 30px;
   padding-left: 50px;
+  opacity: 75%;
+}
+#jackP:hover {
+  opacity: 100%;
+  transition: opacity 1s;
 }
 #movieB {
   margin-top: 20px;
@@ -150,6 +160,15 @@
   padding-top: 90px;
   padding-left: 160px;
   font-size: 35px;
+  animation: flick 1.5s infinite;
+}
+@keyframes flick {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
 }
 #everything {
   flex-direction: column;
@@ -159,6 +178,6 @@
   font-weight: bold;
 }
 #matchmaking {
-  color:rgb(65, 115, 79);
+  color:rgb(20, 208, 164);
   font-weight: bold;
 }
