@@ -16,8 +16,8 @@ function App() {
                 <Container>
                     <Routes>
                         <Route path="/" element={<Main />} exact />
-                        <Route path="/movies" element={<Movies type="movie"/>} />
-                        <Route path="/shows" element={<Movies type="tv" />} />
+                        <Route path="/movies" element={<Movies />} />
+                        <Route path="/shows" element={<Shows />} />
                     </Routes>
                 </Container>
             </div>

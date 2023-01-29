@@ -1,11 +1,15 @@
-import { React, useState, useEffect } from 'react'
+import { React, useEffect, useState } from 'react'
 import { Button, createTheme, TextField, ThemeProvider } from '@mui/material';
 import axios from 'axios';
 import SearchIcon from '@mui/icons-material/Search';
+import './Movies.css';
+import SingleContent from '../../components/SingleContent/SingleContent';
 
-const Movies = (props) => {
+const Movies = () => {
+    const [showResults, setShowResults] = useState(false)
     const [searchText, setSearchText] = useState("");
     const [content, setContent] = useState();
+    const [selection, setSelection] = useState();
 
     const darkTheme = createTheme({
         palette: {
@@ -13,14 +17,26 @@ const Movies = (props) => {
         },
     });
 
+    useEffect(() => {
+        setContent((prev) => []);
+    }, [showResults === true]);
+
     const fetchSearch = async () => {
-        const { data } = await axios.get(`https://api.themoviedb.org/3/search/${props.type}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=${searchText}&page=1&include_adult=false`)
+        setShowResults(false)
+        const { data } = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=${searchText}&page=1&include_adult=false`)
+        setContent(data.results);
+    };
+
+    const findRecommendations = async (name, id) => {
+        setShowResults(true);
+        setSelection(name);
+        const { data } = await axios.get(`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`)
         setContent(data.results);
     };
 
     return (
         <div>
-            <h1 className="sectionName">{props.type === "movie" ? "Movie" : "TV Show"} Recommendation Tool</h1>
+            <h1 className="sectionName">Movie Recommendation Tool</h1>
             <ThemeProvider theme={darkTheme}>
                 <div className="search">
                     <TextField
@@ -28,6 +44,7 @@ const Movies = (props) => {
                         className="searchBox"
                         label="Search"
                         variant="filled"
+                        value={searchText}
                         onChange={(e) => setSearchText(e.target.value)}
                         onKeyDown={(e) => {
                             if (e.key === "Enter") {
@@ -45,9 +62,17 @@ const Movies = (props) => {
                 </div>
             </ThemeProvider>
             <div className="output">
-                {content && content.map((c) => (
-                    <div className="movieName">{c.title}</div>
+                {!showResults && content && content.map((c) => (
+                    <div className="movieName" onClick={() => findRecommendations(c.title, c.id)}>{c.title}</div>
                 ))}
+            </div>
+            {showResults && <h2 className="subheading">Recommendations for <span class="selected">{selection}</span></h2>}
+            <div className="recommendations">
+                {
+                    showResults && content && content.map((c) => (
+                        <SingleContent key={c.id} id={c.id} poster={c.poster_path} title={c.title || c.name} date={c.first_air_date || c.release_date} media_type={"movie"} vote_average={c.vote_average} />
+                    ))
+                }
             </div>
         </div>
     )

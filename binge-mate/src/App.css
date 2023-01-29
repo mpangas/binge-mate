@@ -138,20 +138,6 @@
   border-radius: 50%;
 }
 
-.sectionName {
-  text-align: center;
-  padding-top: 30px;
-}
-
-.search {
-  display: flex;
-  margin: 30px 50px;
-}
-
-.movieName {
-  margin: 3px;
-  padding: 5px;
-}
 #phrase {
   padding-top: 90px;
   padding-left: 160px;

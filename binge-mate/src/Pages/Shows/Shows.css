@@ -1,0 +1,29 @@
+.sectionName {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.search {
+    display: flex;
+    margin: 30px 50px;
+}
+
+.showName {
+    margin: 30px;
+    opacity: 0.7;
+}
+
+.showName:hover {
+    cursor: pointer;
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.output {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-height: 100px;
+}
