@@ -26,6 +26,7 @@ const Main = () => {
             <Button variant="contained" id="tvB"> TV </Button>
           </div>
         </div>
+        <p>Where streaming meets matchmaking.</p>
       </div>
   )
 }
