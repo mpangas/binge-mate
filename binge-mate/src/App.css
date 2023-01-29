@@ -86,7 +86,7 @@
   margin-left: 220px;
 }
 #footer {
-  background-color: rgb(65, 115, 79);
+  background-color:#020934;
   height: 250px;
   position: flex;
   width: 100%;
@@ -127,4 +127,20 @@
 .logo {
   margin: 10px;
   border-radius: 50%;
+}
+#phrase {
+  padding-top: 50px;
+  padding-left: 300px;
+  font-size: 28px;
+}
+#everything {
+  flex-direction: column;
+}
+#streaming {
+  color: red;
+  font-weight: bold;
+}
+#matchmaking {
+  color:rgb(65, 115, 79);
+  font-weight: bold;
 }

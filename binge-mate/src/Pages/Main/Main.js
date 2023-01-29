@@ -14,6 +14,7 @@ const Main = () => {
           </h1>
           <p id="sub"> Get access to more wider variety of movies based on what you watched. </p>
         </div>
+        <div id="everything">
         <div id="images">
           <div id="image1">
             <img src={rrr} id="rrrP" alt=""></img>
@@ -25,8 +26,11 @@ const Main = () => {
             <br></br>
             <Button variant="contained" id="tvB"> TV </Button>
           </div>
+          <div>
+          </div>
         </div>
-        <p>Where streaming meets matchmaking.</p>
+        <p id="phrase">Where <span id="streaming">STREAMING</span> meets <span id="matchmaking">MATCHMAKING</span></p>
+        </div>
       </div>
   )
 }
