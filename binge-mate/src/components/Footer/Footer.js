@@ -11,9 +11,9 @@ const Footer = () => {
             <div id="credit">
               <h2 id="listCreator">Creators</h2>
               <div id = "underline"></div>
-              <p id="pranet">Pranet Allu</p>
+              <p id="pranet"><a className="footerLinkedin" href="https://www.linkedin.com/in/pranetallu/" target="_blank" alt="">Pranet Allu</a></p>
               {/*<SocialIcon url="https://linkedin.com/in/jaketrent" />*/}
-              <p id="mike">Mike Pangas</p>
+              <p id="mike"><a className="footerLinkedin" href="https://www.linkedin.com/in/mikepangas/" target="_blank" alt="">Michael Pangas</a></p>
             </div>
             <div id="OTT">
               <a href="https://www.amazon.com/amazonprime"><img className="logo" src={amazon} width="70px" height="50px" alt=""></img></a>

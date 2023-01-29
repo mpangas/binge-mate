@@ -26,10 +26,10 @@ const SingleContent = ({
     return (
         <div className="media">
             <Badge badgeContent={vote_average} color={vote_average > 6 ? "primary" : "secondary"} />
-            <a className="imageWrap" href={`https://www.youtube.com/watch?v=${video}`} target="_blank" alt="trailer"><img className="poster" src={poster ? `${img_300}/${poster}` : unavailable} alt={title} /></a>
+            <a className="imageWrap" href={video ? `https://www.youtube.com/watch?v=${video}` : 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'} target="_blank" alt="trailer"><img className="poster" src={poster ? `${img_300}/${poster}` : unavailable} alt={title} /></a>
             <b className="title">{title}</b>
             <span className="subtitle">
-                {date.substring(0, 4)}
+                {date && date.substring(0, 4)}
             </span>
         </div>
     )
