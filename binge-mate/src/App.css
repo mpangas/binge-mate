@@ -88,9 +88,15 @@
   margin-top: 20px;
   margin-left: 250px;
 }
+#movieB:hover {
+  box-shadow: 1.5px 3px 8px 10px #888888;
+}
 #tvB {
   margin-top: 20px;
   margin-left: 200px;
+}
+#tvB:hover {
+  box-shadow: 1.5px 3px 8px 10px #888888;
 }
 #footer {
   background-color:#020934;
@@ -137,7 +143,9 @@
   margin: 10px;
   border-radius: 50%;
 }
-
+.logo:hover {
+  box-shadow: 1.5px 3px 8px 10px #888888;
+}
 #phrase {
   padding-top: 90px;
   padding-left: 160px;
