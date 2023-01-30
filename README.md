@@ -1,6 +1,6 @@
-# BingeMate
+# BingeMate - [Live Site](https://bingemate.netlify.app/)
 
-Say goodbye to endless scrolling.
+Say goodbye to endless scrolling
 
 ## Description
 
